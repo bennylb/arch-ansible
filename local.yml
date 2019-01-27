@@ -2,7 +2,4 @@
   become: true
   tasks:
     - name: Install packages
-      pacman: name={{item}}
-      with_items:
-        - tmux
-        - vim
+      pacman: name=['tmux', 'vim']
