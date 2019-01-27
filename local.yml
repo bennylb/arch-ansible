@@ -1,5 +1,5 @@
 - hosts: localhost
   become: true
   tasks:
-    - name: Install packages
-      pacman: name=['tmux', 'vim']
+      pacman:
+        name: ['tmux', 'vim']
