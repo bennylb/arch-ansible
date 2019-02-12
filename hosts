@@ -1,0 +1,6 @@
+[station]
+station ansible_connection=local
+
+
+[sputnik]
+sputnik ansible_connection=local

@@ -1,3 +1,5 @@
 - name: Install packages
   pacman:
-    name: ['tmux', 'vim']
+    name:
+      - tmux
+      # ['tmux', 'vim']

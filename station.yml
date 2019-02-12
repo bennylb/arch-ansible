@@ -1,0 +1,13 @@
+- hosts: station
+  become: true
+  pre_tasks:
+    - name: update repositories
+      pacman: update_cache=yes
+      changed_when: False
+
+  roles:
+    - spacemacs
+
+  # tasks:
+  #   # - include: tasks/packages.yml
+  #   - include_tasks: tasks/packages.yml
