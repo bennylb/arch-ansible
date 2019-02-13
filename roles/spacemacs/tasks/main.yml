@@ -1,5 +1,4 @@
 - name: Spacemacs javascript layer dependencies
   pacman:
     name:
-      - eslint
-      - prettier
+      - node
