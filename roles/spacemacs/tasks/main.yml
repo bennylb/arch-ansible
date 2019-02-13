@@ -1,4 +1,4 @@
 - name: Spacemacs javascript layer dependencies
   pacman:
     name:
-      - node
+      - nodejs
