@@ -1,5 +1,5 @@
 - name: Spacemacs javascript layer dependencies
   pacman:
-    name: nodejs
+    name:
+      - nodejs
     state: present
-

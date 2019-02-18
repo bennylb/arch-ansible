@@ -1,0 +1,10 @@
+user:
+  name: ben
+  shell: zsh
+
+repo:
+  dotfiles:
+    # TODO create repo
+    # url: 
+    dir_name: dotfiles
+    # dest: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}'

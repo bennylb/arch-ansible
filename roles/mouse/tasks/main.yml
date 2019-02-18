@@ -1,0 +1,8 @@
+- name: Install imwheel
+  pacman: name=imwheel status=present
+
+- name: Link .imwheelrc
+  file:
+    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/imwheelrc'
+    dest: '/home/{{ user.name }}/.imwheelrc'
+    state: link

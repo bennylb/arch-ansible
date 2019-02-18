@@ -1,0 +1,4 @@
+- name: Install mpd
+  pacman: name=mpd status=present
+- name: Install Cantata
+  pacman: name=cantata status=present
