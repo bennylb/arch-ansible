@@ -1,5 +1,5 @@
 - name: Install imwheel
-  pacman: name=imwheel status=present
+  pacman: name=imwheel state=present
 
 - name: Link .imwheelrc
   file:
