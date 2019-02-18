@@ -6,7 +6,7 @@
       changed_when: False
 
   roles:
-    - imwheel
+    - { role: imwheel tags: ['imwheel'] }
     - spacemacs
 
   # tasks:
