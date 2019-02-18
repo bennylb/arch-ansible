@@ -6,7 +6,7 @@
       changed_when: False
 
   roles:
-    - mouse
+    - imwheel
     - spacemacs
 
   # tasks:
