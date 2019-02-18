@@ -7,7 +7,7 @@
 
   roles:
     - { role: imwheel, tags: ['imwheel'] }
-    - spacemacs
+    - { role: spacemacs, tags: ['spacemacs'] }
 
   # tasks:
   #   # - include: tasks/packages.yml
