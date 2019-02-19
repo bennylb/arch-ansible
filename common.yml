@@ -1,0 +1,7 @@
+- hosts: localhost
+  become: true
+
+  roles:
+    - { role: pacman_cache, tags: ['pacman_cache'] }
+    - { role: xdg, tags: ['xdg'] }
+    - { role: spacemacs, tags: ['spacemacs'] }

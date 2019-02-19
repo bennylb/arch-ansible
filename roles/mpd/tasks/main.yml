@@ -1,0 +1,9 @@
+- name: Install mpd
+  pacman: name=mpd state=present
+
+- name: Link mpd.conf
+  file:
+    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}'
+
+- name: Install cantata
+  pacman: name=cantata state=present
