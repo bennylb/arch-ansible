@@ -1,4 +1,4 @@
-- name: Spacemacs javascript layer dependencies
+- name: Install spacemacs javascript layer dependencies
   pacman:
     name:
       - nodejs

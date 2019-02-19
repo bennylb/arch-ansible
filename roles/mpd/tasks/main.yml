@@ -3,7 +3,9 @@
 
 - name: Link mpd.conf
   file:
-    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}'
+    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/mpd/mpd.conf'
+    dest: '/home/{{ user.name }}/.config/mpd/mpd.conf'
+    state: link
 
 - name: Install cantata
   pacman: name=cantata state=present

@@ -1,8 +1,8 @@
 - name: Install xdg-utils
   pacman: name=xdg-utils state=present
 
-- name: Set XDG_CONFIG_HOME
-  lineinfile:
-    path: /etc/environment
-    regexp: '^XDG_CONFIG_HOME'
-    line: 'XDG_CONFIG_HOME   DEFAULT=@{HOME}/.config'
+# - name: Set XDG_CONFIG_HOME
+#   lineinfile:
+#     path: /etc/environment
+#     regexp: '^XDG_CONFIG_HOME'
+#     line: 'XDG_CONFIG_HOME   DEFAULT=@{HOME}/.config'
