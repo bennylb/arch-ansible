@@ -2,8 +2,9 @@
   pacman: name=mpd state=present
 
 - name: Create mpd config dir
-  name: '/home/{{ user.name }}/.config/mpd'
-  state: directory
+  file:
+    name: '/home/{{ user.name }}/.config/mpd'
+    state: directory
 
 - name: Link mpd.conf
   file:
