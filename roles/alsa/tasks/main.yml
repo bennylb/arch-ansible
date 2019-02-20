@@ -1,0 +1,5 @@
+- name: Link asoundrc
+  file:
+    src: "/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/asoundrc"
+    dest: "/home/{{ user.name }}/.asoundrc"
+    state: link
