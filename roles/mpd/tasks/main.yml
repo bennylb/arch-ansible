@@ -11,6 +11,7 @@
     src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/mpd/mpd.conf'
     dest: '/home/{{ user.name }}/.config/mpd/mpd.conf'
     owner: "{{ user.name }}"
+    group: "{{ user.name }}"
     state: link
 
 - name: Install cantata
