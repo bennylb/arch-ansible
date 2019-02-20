@@ -3,5 +3,6 @@
 
   roles:
     - { role: pacman_cache, tags: ['pacman_cache'] }
+    - { role: common, tags: ['common'] }
     - { role: xdg, tags: ['xdg'] }
     - { role: spacemacs, tags: ['spacemacs'] }

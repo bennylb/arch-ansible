@@ -1,0 +1,4 @@
+- name: Install common packages
+  pacman:
+    name: "{{ item }}"
+    loop: "{{ packages.common }}"
