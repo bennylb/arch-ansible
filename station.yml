@@ -6,6 +6,7 @@
 
   roles:
     - { role: imwheel, tags: ['imwheel'] }
+    - { role: alsa, tags: ['alsa'] }
     - { role: mpd, tags: ['mpd'] }
 
   # tasks:
