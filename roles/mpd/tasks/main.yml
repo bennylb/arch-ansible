@@ -16,3 +16,6 @@
 
 - name: Install cantata
   pacman: name=cantata state=present
+
+- name: Install mpc
+  pacman: name=mpc state=present
