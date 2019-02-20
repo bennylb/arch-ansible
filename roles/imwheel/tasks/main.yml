@@ -5,4 +5,6 @@
   file:
     src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/imwheelrc'
     dest: '/home/{{ user.name }}/.imwheelrc'
+    user: "{{ user.name }}"
+    group: "{{ user.name }}"
     state: link
