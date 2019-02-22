@@ -14,11 +14,19 @@
     group: "{{ user.name }}"
     state: link
 
-- name: Install cantata
-  pacman: name=cantata state=present
+- name: Link ncmpc config
+  file:
+    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/ncmpc/config'
+    dest: '/home/{{ user.name }}/.config/ncmpc/config'
+    owner: "{{ user.name }}"
+    group: "{{ user.name }}"
+    state: link
 
 - name: Install mpc
-  pacman: name=mpc state=absent
+  pacman: name=mpc state=present
 
-- name: Install ncmpcpp
-  pacman: name=ncmpcpp state=present
+- name: Install ncmpc
+  pacman: name=ncmpc state=present
+
+- name: Install cantata
+  pacman: name=cantata state=present
