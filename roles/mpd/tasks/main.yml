@@ -14,6 +14,11 @@
     group: "{{ user.name }}"
     state: link
 
+- name: Create ncmpc config dir
+  file:
+    name: '/home/{{ user.name }}/.config/ncmpc'
+    state: directory
+
 - name: Link ncmpc config
   file:
     src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/ncmpc/config'
