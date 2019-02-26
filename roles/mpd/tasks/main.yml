@@ -16,8 +16,6 @@
   file:
     src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/mpd/mpd.conf'
     dest: '/home/{{ user.name }}/.config/mpd/mpd.conf'
-    # owner: "{{ user.name }}"
-    # group: "{{ user.name }}"
     state: link
 
 ## Client install and config
@@ -36,8 +34,6 @@
   file:
     src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/ncmpc/config'
     dest: '/home/{{ user.name }}/.config/ncmpc/config'
-    # owner: "{{ user.name }}"
-    # group: "{{ user.name }}"
     state: link
 
 - name: Install mpc
