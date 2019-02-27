@@ -2,40 +2,19 @@
 - name: Install mpd
   pacman: name=mpd state=present
 
-- name: Create mpd config dir
+- name: Link mpd config
   become: yes
   become_user: "{{ user.name }}"
   file:
     name: '/home/{{ user.name }}/.config/mpd'
     state: directory
     recurse: yes
-
-- name: Link mpd.conf
-  become: yes
-  become_user: "{{ user.name }}"
-  file:
+- file:
     src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/mpd/mpd.conf'
     dest: '/home/{{ user.name }}/.config/mpd/mpd.conf'
     state: link
 
 ## Client install and config
-
-- name: Create ncmpc config dir
-  become: yes
-  become_user: "{{ user.name }}"
-  file:
-    name: '/home/{{ user.name }}/.config/ncmpc'
-    state: directory
-    recurse: yes
-
-- name: Link ncmpc config
-  become: yes
-  become_user: "{{ user.name }}"
-  file:
-    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/ncmpc/config'
-    dest: '/home/{{ user.name }}/.config/ncmpc/config'
-    state: link
-
 - name: Install mpc
   pacman: name=mpc state=present
 
@@ -44,3 +23,15 @@
 
 - name: Install cantata
   pacman: name=cantata state=present
+
+- name: Link ncmpc config
+  become: yes
+  become_user: "{{ user.name }}"
+  file:
+    name: '/home/{{ user.name }}/.config/ncmpc'
+    state: directory
+    recurse: yes
+- file:
+    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/ncmpc/config'
+    dest: '/home/{{ user.name }}/.config/ncmpc/config'
+    state: link
