@@ -10,7 +10,7 @@
     state: directory
     recurse: yes
 
-- name: Link ncmpc config
+- name: Link mpd config
   become: yes
   become_user: "{{ user.name }}"
   file:
