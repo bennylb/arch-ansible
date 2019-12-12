@@ -8,6 +8,7 @@
     - { role: imwheel, tags: ['imwheel'] }
     - { role: alsa, tags: ['alsa'] }
     - { role: mpd, tags: ['mpd'] }
+    - { role: qutebrowser, tags: ['qutebrowser'] }
 
   # tasks:
   #   # - include: tasks/packages.yml

@@ -2,9 +2,9 @@
   pacman: name=imwheel state=present
 
 - name: Link .imwheelrc
+  become: yes
+  become_user: "{{ user.name }}"
   file:
-    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/imwheelrc'
-    dest: '/home/{{ user.name }}/.imwheelrc'
-    owner: "{{ user.name }}"
-    group: "{{ user.name }}"
+    src: "{{ repo.dotfiles.path }}/imwheelrc"
+    dest: "/home/{{ user.name }}/.imwheelrc"
     state: link

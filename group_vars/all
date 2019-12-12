@@ -6,9 +6,11 @@ repo:
   dotfiles:
     # TODO create repo
     # url: 
-    dir_name: dotfiles
+    name: dotfiles
+    path: /home/{{ user.name }}/src/git/arch-ansible/dotfiles
 
 packages:
   common:
     - tldr
     - nmap
+    - rofi

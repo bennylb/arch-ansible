@@ -1,7 +1,7 @@
 - name: Link asoundrc
+  become: yes
+  become_user: "{{ user.name }}"
   file:
-    src: "/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/asoundrc"
+    src: "{{ repo.dotfiles.path }}/asoundrc"
     dest: "/home/{{ user.name }}/.asoundrc"
-    owner: "{{ user.name }}"
-    group: "{{ user.name }}"
     state: link

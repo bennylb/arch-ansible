@@ -1,4 +1,4 @@
-## Daemon install and config
+  ## Daemon install and config
 - name: Install mpd
   pacman: name=mpd state=present
 
@@ -6,7 +6,7 @@
   become: yes
   become_user: "{{ user.name }}"
   file:
-    name: '/home/{{ user.name }}/.config/mpd'
+    name: "/home/{{ user.name }}/.config/mpd"
     state: directory
     recurse: yes
 
@@ -14,8 +14,8 @@
   become: yes
   become_user: "{{ user.name }}"
   file:
-    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/mpd/mpd.conf'
-    dest: '/home/{{ user.name }}/.config/mpd/mpd.conf'
+    src: "{{ repo.dotfiles.path }}/config/mpd/mpd.conf"
+    dest: "/home/{{ user.name }}/.config/mpd/mpd.conf"
     state: link
 
 ## Client install and config
@@ -32,7 +32,7 @@
   become: yes
   become_user: "{{ user.name }}"
   file:
-    name: '/home/{{ user.name }}/.config/ncmpc'
+    name: "/home/{{ user.name }}/.config/ncmpc"
     state: directory
     recurse: yes
 
@@ -40,6 +40,6 @@
   become: yes
   become_user: "{{ user.name }}"
   file:
-    src: '/home/{{ user.name }}/{{ repo.dotfiles.dir_name }}/config/ncmpc/config'
-    dest: '/home/{{ user.name }}/.config/ncmpc/config'
+    src: "{{ repo.dotfiles.path }}/config/ncmpc/config"
+    dest: "/home/{{ user.name }}/.config/ncmpc/config"
     state: link
